@@ -33,17 +33,11 @@ else:
         rockset = volcanoes[volcanoes.Region == selected_region]
 
 rt_list = []
-for type in volcanoes['Dominant_Rock_Type']:
+for type in rockset['Dominant_Rock_Type']:
         if type not in rt_list and type != 'No Data (checked)':
             rt_list.append(type)
 rt_list = sorted(rt_list)
-rt_list.insert(0, 'All') #This allows me to use the rt_list in the next query
-select_rt_list = []
-for rock in rt_list:
-    for line in rockset['Dominant_Rock_Type']:
-        if rock == line and rock not in select_rt_list:
-            select_rt_list.append(rock)
-select_rt_list.insert(0,'All')
+rt_list.insert(0, 'All')
 
 selected_rt = st.selectbox('Please select a rock type', select_rt_list)
 
