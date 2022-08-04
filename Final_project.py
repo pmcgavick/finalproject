@@ -39,7 +39,7 @@ for type in rockset['Dominant_Rock_Type']:
 rt_list = sorted(rt_list)
 rt_list.insert(0, 'All')
 
-selected_rt = st.selectbox('Please select a rock type', select_rt_list)
+selected_rt = st.selectbox('Please select a rock type', rt_list)
 
 if selected_rt == 'All':
         finaldf = rockset
