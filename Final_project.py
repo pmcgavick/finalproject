@@ -69,9 +69,9 @@ layer = pdk.Layer('ScatterplotLayer',
 
 tool_tip = {"html":'Name: <b> {Volcano_Name}</b> </br> '+
                    'Region: {Region} </br> '+
-                   'Subregion: {Subregion} '
-                   'Rock Type: {Dominant_Rock_Type}'
-                   'Coordinates: {lon,lat}',
+                   'Subregion: {Subregion}</br> '+
+                   'Rock Type: {Dominant_Rock_Type} </br>'+
+                   'Coordinates: {lon,lat}',+
                 "style": { "backgroundColor": "steelblue",
                             "color": "white"}
                 }
